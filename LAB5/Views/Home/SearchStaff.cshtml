@@ -1,0 +1,45 @@
+﻿@model IEnumerable<LAB5.Models.Staff>
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Поиск</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <td>Id</td>
+            <td>Фамилия</td>
+            <td>Имя</td>
+            <td>Отчество</td>
+            <td>Должность</td>
+            <td>Год рождения</td>
+            <td>Год принятия</td>
+            <td>Адрес</td>
+            <td>     </td>
+            <td>Изменить</td>
+            <td>Удалить</td>
+        </tr>
+        @foreach (var staff in Model)
+        {
+            <tr>
+                <td>@staff.Id</td>
+                <td>@staff.Surname</td>
+                <td>@staff.Name</td>
+                <td>@staff.FName</td>
+                <td>@staff.Post</td>
+                <td>@staff.YearOfBirth</td>
+                <td>@staff.YearOfAdoption</td>
+                <td>@staff.Address</td>
+                <td>     </td>
+                <td><a href="Home/EditStaff/@staff.Id">Изменить</a></td>
+                <td><a href="Home/DelStaff/@staff.Id">Удалить</a></td>
+            </tr>
+        }
+    </table>
+    <a href="../">Вернуться на главную</a>
+</body>
+</html>

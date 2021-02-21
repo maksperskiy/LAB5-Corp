@@ -1,0 +1,53 @@
+﻿@model LAB5.Models.Staff
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Редактирование</title>
+</head>
+<body>
+    @using (Html.BeginForm())
+    {
+        @Html.LabelFor(model => model.Surname, "Фамилия")
+        <br />
+        @Html.EditorFor(model => model.Surname)
+        <br />
+        <br />
+        @Html.LabelFor(model => model.Name, "Имя")
+        <br />
+        @Html.EditorFor(model => model.Name)
+        <br />
+        <br />
+        @Html.LabelFor(model => model.FName, "Отчество")
+        <br />
+        @Html.EditorFor(model => model.FName)
+        <br />
+        <br />
+        @Html.LabelFor(model => model.Post, "Должность")
+        <br />
+        @Html.EditorFor(model => model.Post)
+        <br />
+        <br />
+        @Html.LabelFor(model => model.YearOfBirth, "Год рождения")
+        <br />
+        @Html.EditorFor(model => model.YearOfBirth)
+        <br />
+        <br />
+        @Html.LabelFor(model => model.YearOfAdoption, "Год принятия")
+        <br />
+        @Html.EditorFor(model => model.YearOfAdoption)
+        <br />
+        <br />
+        @Html.LabelFor(model => model.Address, "Адрес")
+        <br />
+        @Html.EditorFor(model => model.Address)
+        <br />
+        <br />
+        <input type="submit" value="Редактировать" />
+    }
+</body>
+</html>
+
